@@ -1,0 +1,199 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box; 
+}
+body{
+    background:#EA8CB7;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.helloKitty{
+    position:relative;
+}
+
+.helloKitty__head{
+    width: 450px;
+    height:360px;
+    background: white;
+    border: 15px solid black;
+    border-radius: 50%;
+    position:relative;
+}
+
+.helloKitty__eye{
+    width: 30px;
+    height: 40px;
+    background: black;
+    position:absolute;
+    border-radius:50%;
+    top:50%;
+}
+
+.helloKitty__eye--left{
+    left:22%;
+}
+
+.helloKitty__eye--right{
+    right:22%;
+}
+
+.helloKitty__nose{
+    width:40px;
+    height:30px;
+    background: yellow;
+    position:absolute;
+    top:67%;
+    left:50%;
+    transform: translateX(-50%);
+    border-radius:50%;
+    border: 8px solid black;
+}
+
+.helloKitty__ear{
+    width: 170px;
+    height:300px;
+    background:white;
+    position:absolute;
+    top:-12%;
+    border-radius:50%;
+    border: 15px solid black;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 35%, 0% 35%);
+    animation-duration:0.8s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+.helloKitty__ear--left{
+    left:7%;
+    animation-name: ears--left;
+}
+
+.helloKitty__ear--right{
+    right:7%;
+    animation-name: ears--right;
+}
+
+.helloKitty__bowtie{
+    position:absolute;
+    top:0%;
+    right:25%;
+    transform:  rotate(25deg) scale(1.2);
+}
+
+.helloKitty__bowtieCircle{
+    height:60px;
+    width:60px;
+    background: #E60E63;
+    border-radius: 50%;
+    position:absolute;
+    border: 10px solid black;
+    z-index: 1;
+    top:5px;
+}
+
+.helloKitty__bowtieOval{
+    height: 100px;
+    width:80px;
+    background: #E60E63;
+    position:absolute;
+    border-radius:50%;
+    border: 10px solid black;
+    top:-20px;
+}
+
+.helloKitty__bowtieOval--left{
+    left: -50px;
+}
+
+.helloKitty__bowtieOval--right{
+    right: -110px;
+}
+
+.helloKitty__inner{
+    height:40px;
+    width:40px;
+    background:green;
+    position:absolute;
+    top:30%;
+    border-radius:50%;
+    background: #E60E63;
+    border: 10px solid black;
+}
+
+.helloKitty__inner--left{
+    right:0;
+}
+
+.helloKitty__inner--right{
+    left:0;
+}
+
+.helloKitty__whisker{
+    height:30px;
+    width:90px;
+    border: 10px solid transparent;
+    border-top: 10px solid black;
+    border-radius:50%;
+    position:absolute;
+    z-index: 2;
+}
+
+.helloKitty__whisker--first{
+    top:50%;
+    left: -9%;
+    transform: rotate(-10deg);
+}
+
+.helloKitty__whisker--second{
+    top:65%;
+    left:-7%;
+    transform: rotate(-20deg);
+}
+
+
+.helloKitty__whisker--third{
+    top:78%;
+    left:1%;
+    transform: rotate(-25deg);
+}
+
+
+.helloKitty__whisker--fourth{
+    top:50%;
+    right: -9%;
+    transform: rotate(10deg);
+}
+
+.helloKitty__whisker--fifth{
+    top:65%;
+    right:-7%;
+    transform: rotate(20deg);
+}
+
+.helloKitty__whisker--sixth{
+    top:78%;
+    right:1%;
+    transform: rotate(25deg);
+}
+
+@keyframes ears--left {
+    from{
+        transform: rotate(-35deg);
+    }
+    to{
+        transform:rotate(-33deg);
+    }
+}
+
+@keyframes ears--right {
+    from{
+        transform: rotate(35deg);
+    }
+    to{
+        transform:rotate(33deg);
+    }
+}
